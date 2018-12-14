@@ -120,14 +120,13 @@ export const Nav = styled.nav`
     flex-direction: column;
     text-align: center;`};
 
-    ${max.mobile_m`padding: 4rem 1rem 3rem 1rem;`};    
+    ${max.mobile_m`padding: 4rem 1rem 3rem 1rem;`};
   }
 
   ${Button} {
     width: 12.27rem;
     height: 4.26rem;
     font-size: 1.28rem;
-    font-weight: bold;
     margin: 2.13rem 0;
   }
 
@@ -144,40 +143,81 @@ export const Nav = styled.nav`
 // *******************Body***********************
 
 export const FeatureList = styled.div`
-${Wrapper} {
-  flex-wrap: wrap;
-}
-`;
-
+  ${Wrapper} {
+    flex-wrap: wrap;
+  }
+`
 
 export const Feature = styled.div`
-width: 44.62%;
-margin-bottom: 5.5rem;
+  width: 44.62%;
+  margin-bottom: 5.5rem;
 
-&:not(:nth-of-type(2n)) {
-  margin-right: 10.76%;
+  &:not(:nth-of-type(2n)) {
+    margin-right: 10.76%;
 
-  ${max.mobile_l`margin-right: 0;`};
-}
+    ${max.mobile_l`margin-right: 0;`};
+  }
 
-${max.mobile_l`margin-right: 0;
+  ${max.mobile_l`margin-right: 0;
 width: 100%;`};
 
-${ImageBox} {
-  width: 100%;
+&:nth-of-type(2) {
+  ${ImageBox} {
+    padding: 0 4rem;
+    position: relative;
+
+    img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+&:nth-of-type(3) {
+  ${ImageBox} {
+    overflow: visible;
+
+    ${max.mobile_m`overflow: visible;`};
+    ${max.mobile_l`overflow: hidden;`};
+
+    img {
+      transform: scale(1.24);
+    position: relative;
+    top: -0.7rem;
+
+   
+
+    ${max.mobile_m`transform: scale(1.24);
+    position: relative;
+    top: -0.7rem;`};
+
+    ${max.mobile_l`transform: scale(1.21);
+    position: relative;
+    top: -2.4rem;`};
+    }
+  }
+}
+
+  ${ImageBox} {
+    width: 100%;
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 3rem;
+    height: 22.4rem;
+    background-color: ${props => props.color};
 
-    ${max.mobile_l`margin-bottom: 1.5rem;`};
-}
+    ${max.mobile_l`margin-bottom: 2rem;`};
 
-${H3} {
-  font-size: 1.4rem;
-  line-height: 2.5;
-}
+    
+  }
 
-${P} {
-  font-size: 1.2rem;
-}
+  ${H3} {
+    font-size: 1.4rem;
+    line-height: 2.5;
+  }
+
+  ${P} {
+    font-size: 1.2rem;
+  }
 `

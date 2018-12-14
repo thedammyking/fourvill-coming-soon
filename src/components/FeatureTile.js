@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Feature, ImageBox, H3, P} from './styled'
+import { Feature, ImageBox, H3, P } from './styled'
+import TileOne from '../svg/tile-1.svg'
 
-const FeatureTile = ({ image: I, title, text }) => {
+const FeatureTile = ({ image: I, title, text, color }) => {
+  console.log(TileOne)
   return (
-    <Feature>
+    <Feature color={color}>
       <ImageBox>
-        <I />
+        <I/>
       </ImageBox>
       <H3>{title}</H3>
       <P>{text}</P>
@@ -15,7 +17,6 @@ const FeatureTile = ({ image: I, title, text }) => {
 }
 
 FeatureTile.propTypes = {
-  image: PropTypes.func,
   title: PropTypes.string,
   text: PropTypes.string,
 }
