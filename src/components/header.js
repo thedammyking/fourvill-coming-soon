@@ -10,7 +10,7 @@ import {
   Button,
   AppHeader,
 } from '../components/styled'
-import Logo from './logo'
+import logo from '../svg/logo.svg'
 
 const Header = ({ siteTitle }) => (
   <AppHeader>
@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => (
       <Nav>
         <ImageBox>
           <Link to="/">
-            <Logo />
+            <img src={logo} alt="" />
           </Link>
         </ImageBox>
         <Wrapper>
