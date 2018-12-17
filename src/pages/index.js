@@ -16,7 +16,7 @@ const TileFour = () => <img src="" alt=""/>
 const IndexPage = () => { 
   return (
   <Layout>
-    <SEO title="Coming Soon" keywords={['fourvill', 'coming soon']} />
+    <SEO title="Fourvill" keywords={['fourvill', 'coming soon']} />
     <FeatureList>
     <Wrapper>
     <FeatureTile image={TileOne} color="#48ACF0" title="PLAN, COLLABORATE & CREATE EFFECTIVELY" text="Organize your content into topics, platforms, projects, interests." />
