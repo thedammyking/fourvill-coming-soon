@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Coming Soon',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@creathors',
+      'Organize and improve social content while fostering social engagement for creatives and businesses across the web. ',
+    author: '@fourvill',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
