@@ -112,14 +112,15 @@ export const Nav = styled.nav`
   }
 
   ${Button} {
-    width: 15.02rem;
-    height: 5.526rem;
+    width: 11.6rem;
+    height: 4.3rem;
     font-size: 1.28rem;
     margin: 2.13rem 0;
     box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.15);
     border-radius: 0.3rem;
 
-    ${max.tablet`font-size: 1.67rem;`};
+    ${max.tablet`font-size: 1.67rem; width: 15.02rem;
+    height: 5.526rem;`};
 
     ${max.mobile_m`width: 12.01rem;
     height: 4.42rem;`};
@@ -153,7 +154,6 @@ export const Hero = styled.div`
     display: none;
     font-family: 'Niramit', sans-serif;
     font-size: 12px;
-    display: inline-block;
     background-color: #dbb3b1;
     color: ${color.white};
     padding: 0.2rem 1rem;
