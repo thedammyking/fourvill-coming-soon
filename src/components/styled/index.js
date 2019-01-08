@@ -122,8 +122,16 @@ export const Nav = styled.nav`
     ${max.tablet`font-size: 1.67rem; width: 15.02rem;
     height: 5.526rem;`};
 
+    ${max.mobile_l`display: none;`};
+
     ${max.mobile_m`width: 12.01rem;
     height: 4.42rem;`};
+
+    &.get-started {
+      display: none;
+
+      ${max.mobile_l`display: block;`};
+    }
   }
 
   ${P} {

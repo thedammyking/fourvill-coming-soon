@@ -24,7 +24,10 @@ const Header = ({ siteTitle }) => (
         <Wrapper>
           <P>We'll be live soon</P>
           <Button>
-            {window.innerWidth <= 425 ? `Get Started` : `Know when`}
+            Know when
+          </Button>
+          <Button className="get-started">
+            Get Started
           </Button>
         </Wrapper>
       </Nav>
