@@ -22,10 +22,10 @@ const Header = ({ siteTitle }) => (
           </Link>
         </ImageBox>
         <Wrapper>
-          <P>
-            We'll be live soon
-          </P>
-          <Button>Know when</Button>
+          <P>We'll be live soon</P>
+          <Button>
+            {window.innerWidth <= 425 ? `Get Started` : `Know when`}
+          </Button>
         </Wrapper>
       </Nav>
     </Container>
