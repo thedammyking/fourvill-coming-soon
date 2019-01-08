@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.983 21.311">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.75;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="noun_article_200443" class="cls-1" transform="translate(-31 -24)">
+    <path id="Path_86" data-name="Path 86" class="cls-2" d="M43.54,24H31V45.311H46.983V27.934Zm2.623,20.491H31.82V24.82H42.885v3.688h3.279Z"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-2" width="4.098" height="0.82" transform="translate(39.196 31.377)"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-2" width="4.098" height="0.82" transform="translate(39.196 33.016)"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-2" width="4.098" height="0.82" transform="translate(39.196 34.655)"/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-2" width="4.098" height="0.82" transform="translate(39.196 36.295)"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" class="cls-2" width="8.606" height="0.82" transform="translate(34.688 37.934)"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" class="cls-2" width="3.688" height="5.737" transform="translate(34.688 31.377)"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-2" width="8.606" height="0.82" transform="translate(34.688 39.573)"/>
+  </g>
+</svg>

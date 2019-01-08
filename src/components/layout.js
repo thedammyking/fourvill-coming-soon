@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Footer from './footer'
 import { Container, Main, GlobalStyle } from '../components/styled'
 
 const Layout = ({ children }) => (
@@ -23,6 +24,7 @@ const Layout = ({ children }) => (
         <Main>
           <Container>{children}</Container>
         </Main>
+        <Footer />
       </>
     )}
   />

@@ -23,9 +23,9 @@ const Header = ({ siteTitle }) => (
         </ImageBox>
         <Wrapper>
           <P>
-            Know when we are live and get free 3 months access to everything
+            We'll be live soon
           </P>
-          <Button>I'd like that</Button>
+          <Button>Know when</Button>
         </Wrapper>
       </Nav>
     </Container>

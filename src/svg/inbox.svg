@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.491 16.944">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #faffd8;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="noun_Email_1496068" transform="translate(-8.606 -9.2)">
+    <path id="Path_94" data-name="Path 94" class="cls-1" d="M25.4,35.2V46.1H9.3V35.2" transform="translate(0 -20.456)"/>
+    <path id="Path_95" data-name="Path 95" class="cls-1" d="M35.132,35.2v2.136l-4.866,3.3-4.866-3.3V35.2" transform="translate(-12.915 -20.456)"/>
+    <line id="Line_4" data-name="Line 4" class="cls-1" x1="3.185" y2="2.156" transform="translate(9.3 12.588)"/>
+    <line id="Line_5" data-name="Line 5" class="cls-1" x1="3.185" y1="2.156" transform="translate(22.217 12.588)"/>
+    <path id="Path_96" data-name="Path 96" class="cls-1" d="M35.132,16.881V9.7H25.4v7.181" transform="translate(-12.915)"/>
+    <path id="Path_97" data-name="Path 97" class="cls-1" d="M17.351,40.64l-4.866-3.3L9.3,35.2" transform="translate(0 -20.456)"/>
+    <path id="Path_98" data-name="Path 98" class="cls-1" d="M58.051,35.2l-3.185,2.136L50,40.64" transform="translate(-32.649 -20.456)"/>
+    <line id="Line_6" data-name="Line 6" class="cls-2" x2="7.734" transform="translate(13.632 11.401)"/>
+    <line id="Line_7" data-name="Line 7" class="cls-2" x2="6.033" transform="translate(13.632 13.162)"/>
+    <line id="Line_8" data-name="Line 8" class="cls-2" x2="6.033" transform="translate(13.632 14.744)"/>
+    <line id="Line_9" data-name="Line 9" class="cls-2" x2="6.033" transform="translate(13.632 16.327)"/>
+  </g>
+</svg>
