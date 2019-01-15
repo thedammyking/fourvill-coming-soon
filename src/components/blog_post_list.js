@@ -37,7 +37,7 @@ const BlogPostList = props => {
               produced. For us, content has been a major cornerstone of our
               growth and it’s something we put a lot of time and energy in to.
             </P>
-            <Link to="/">Read More</Link>
+            <Link to="/post">Read More</Link>
           </div>
         </FirstPost>
         <OtherPosts>
@@ -45,7 +45,7 @@ const BlogPostList = props => {
             <li>
               <Wrapper>
                 <H5>
-                  <Link to="/">
+                  <Link to="/post">
                     5 ways to use personalization to grow your SAAS
                   </Link>
                 </H5>
@@ -55,7 +55,7 @@ const BlogPostList = props => {
             <li>
               <Wrapper>
                 <H5>
-                  <Link to="/">How to identify your perfect customer</Link>
+                  <Link to="/post">How to identify your perfect customer</Link>
                 </H5>
                 <span>3</span>
               </Wrapper>
@@ -63,7 +63,7 @@ const BlogPostList = props => {
             <li>
               <Wrapper>
                 <H5>
-                  <Link to="/">
+                  <Link to="/post">
                     How founders can write a quality post in 1 hour
                   </Link>
                 </H5>
@@ -73,7 +73,7 @@ const BlogPostList = props => {
             <li>
               <Wrapper>
                 <H5>
-                  <Link to="/">
+                  <Link to="/post">
                     How to use customer feedback to fuel your growth
                   </Link>
                 </H5>
@@ -97,7 +97,7 @@ const BlogPostList = props => {
               produced. For us, content has been a major cornerstone of our
               growth and it’s something we put a lot of time and energy in to.
             </P>
-            <Link to="/">Read More</Link>
+            <Link to="/post">Read More</Link>
           </div>
         </FirstPost>
         <OtherPosts>
@@ -105,7 +105,7 @@ const BlogPostList = props => {
             <li>
               <Wrapper>
                 <H5>
-                  <Link to="/">
+                  <Link to="/post">
                     5 ways to use personalization to grow your SAAS
                   </Link>
                 </H5>
@@ -115,7 +115,7 @@ const BlogPostList = props => {
             <li>
               <Wrapper>
                 <H5>
-                  <Link to="/">How to identify your perfect customer</Link>
+                  <Link to="/post">How to identify your perfect customer</Link>
                 </H5>
                 <span>3</span>
               </Wrapper>
@@ -123,7 +123,7 @@ const BlogPostList = props => {
             <li>
               <Wrapper>
                 <H5>
-                  <Link to="/">
+                  <Link to="/post">
                     How founders can write a quality post in 1 hour
                   </Link>
                 </H5>
@@ -133,7 +133,7 @@ const BlogPostList = props => {
             <li>
               <Wrapper>
                 <H5>
-                  <Link to="/">
+                  <Link to="/post">
                     How to use customer feedback to fuel your growth
                   </Link>
                 </H5>
