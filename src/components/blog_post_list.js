@@ -13,6 +13,7 @@ import {
 } from './styled/blog'
 import headerImage from '../svg/animal-pair.svg'
 import { Link } from 'gatsby'
+import Header from '../components/post_header'
 
 const BlogPostList = props => {
   return (
@@ -262,6 +263,7 @@ const BlogPostList = props => {
           </ul>
         </OtherPosts>
       </CategoryRecentPosts>
+      <Header />
     </PostList>
   )
 }

@@ -232,5 +232,58 @@ export const OtherPosts = styled.div`
 export const SinglePost = styled.div`
   width: 55.6%;
   margin: 0 auto;
+
+  .body {
+    width: 80%;
+    margin: 0 auto;
+
+    ${P} {
+      font-size: 1.5rem;
+      line-height: 1.3;
+      margin: 2rem 0;
+    }
+  }
 `
-export const PostHeader = styled(Wrapper)``
+export const PostHeader = styled(Wrapper)`
+  padding-top: 3rem;
+
+  .image {
+    position: relative;
+    width: 12.53rem;
+    height: 22.26rem;
+    background: ${color.secondary};
+    margin-left: 8.48rem;
+    margin-right: 3.7rem;
+  }
+
+  ${ImageBox} {
+    position: absolute;
+    width: 18.18rem;
+    left: -8.48rem;
+    top: 5.49rem;
+  }
+
+  .details {
+    & > ${Wrapper} {
+      font-size: 1.3rem;
+
+      .author {
+        color: ${color.accent};
+        margin-right: 2.4rem;
+      }
+    }
+
+    ${H3} {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin: 1rem 0;
+    }
+
+    .read-time {
+      background: #dce8e4;
+      width: 7.95rem;
+      text-align: center;
+      border-radius: 25px;
+    }
+  }
+`
