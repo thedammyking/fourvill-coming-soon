@@ -9,10 +9,10 @@ import {
   P,
   Button,
   AppHeader,
-} from '../components/styled'
+} from './styled'
 import logo from '../svg/logo.svg'
 
-const Header = ({ siteTitle }) => (
+const Header = props => (
   <AppHeader>
     <Container>
       <Nav>
@@ -23,12 +23,8 @@ const Header = ({ siteTitle }) => (
         </ImageBox>
         <Wrapper>
           <P>We'll be live soon</P>
-          <Button>
-            Know when
-          </Button>
-          <Button className="get-started">
-            Get Started
-          </Button>
+          <Button>Know when</Button>
+          <Button className="get-started">Get Started</Button>
         </Wrapper>
       </Nav>
     </Container>

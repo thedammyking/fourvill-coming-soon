@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Layout from '../components/layout'
+import ComingSoonLayout from '../components/coming_soon_layout'
 import SEO from '../components/seo'
 import { FeatureList, Hero, H1, P } from '../components/styled'
 import Feature from '../components/Feature'
@@ -15,7 +15,7 @@ import bulk from '../svg/bulk.svg'
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <ComingSoonLayout>
       <SEO title="Fourvill" keywords={['fourvill', 'coming soon']} />
       <Hero>
         <div className="coming-soon-tag">Coming soon</div>
@@ -89,7 +89,7 @@ const IndexPage = () => {
           bg="#FE7C78,#FE7C78,#FFB86F"
         />
       </FeatureList>
-    </Layout>
+    </ComingSoonLayout>
   )
 }
 export default IndexPage
