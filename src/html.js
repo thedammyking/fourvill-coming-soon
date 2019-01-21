@@ -21,6 +21,7 @@ export default class HTML extends React.Component {
             href="https://fonts.googleapis.com/css?family=Hind+Guntur:400,500,700"
             rel="stylesheet"
           />
+          <script src="https://embed.typeform.com/embed.js" />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
