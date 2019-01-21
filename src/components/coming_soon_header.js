@@ -23,8 +23,8 @@ const Header = props => (
         </ImageBox>
         <Wrapper>
           <P>We'll be live soon</P>
-          <Button>Know when</Button>
-          <Button className="get-started">Get Started</Button>
+          <Button className="start">Know when</Button>
+          <Button className="get-started start">Get Started</Button>
         </Wrapper>
       </Nav>
     </Container>

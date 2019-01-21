@@ -32,7 +32,7 @@ const Header = props => (
             </NavItem>
           </NavList>
         </Wrapper>
-        <Button>Get Started</Button>
+        <Button className="start">Get Started</Button>
       </Nav>
     </Container>
   </AppHeader>

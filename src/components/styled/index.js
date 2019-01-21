@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
         ${min.laptop_l`font-size: 75%;`};
         ${max.laptop`font-size: 56.25%;`};
-        ${max.tablet` font-size: 50%;`};
+        ${max.laptop` font-size: 50%;`};
     }
 
     body {
@@ -61,7 +61,7 @@ export const Container = styled.div`
   width: 107.28rem;
   margin: 0 auto;
 
-  ${max.tablet`width: 90%`};
+  ${max.laptop`width: 90%`};
 `
 export const Main = styled.main`
   margin: 4.61rem auto;
@@ -96,7 +96,7 @@ export const AppHeader = styled.header`
   width: 100%;
   background-color: ${color.white};
 
-  ${max.tablet`background-color: #F7F6FB`};
+  ${max.laptop`background-color: #F7F6FB`};
   ${max.mobile_l`background-color: ${color.white}`};
 `
 
@@ -119,7 +119,7 @@ export const Nav = styled.nav`
     box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.15);
     border-radius: 0.3rem;
 
-    ${max.tablet`font-size: 1.67rem; width: 15.02rem;
+    ${max.laptop`font-size: 1.67rem; width: 15.02rem;
     height: 5.526rem;`};
 
     ${max.mobile_l`display: none;`};
@@ -138,7 +138,7 @@ export const Nav = styled.nav`
     font-size: 1.491rem;
     margin-right: 1.2rem;
 
-    ${max.tablet`font-size: 1.9rem;`};
+    ${max.laptop`font-size: 1.9rem;`};
 
     ${max.mobile_l`display: none`};
 
@@ -147,7 +147,7 @@ export const Nav = styled.nav`
 
   ${ImageBox} {
     width: 8.23rem;
-    ${max.tablet`width: 10.4rem`};
+    ${max.laptop`width: 10.4rem`};
   }
 `
 
@@ -156,7 +156,7 @@ export const Nav = styled.nav`
 export const Hero = styled.div`
   margin-bottom: 4.61rem;
 
-  ${max.tablet`text-align: center`};
+  ${max.laptop`text-align: center`};
 
   .coming-soon-tag {
     display: none;
@@ -169,7 +169,7 @@ export const Hero = styled.div`
     line-height: initial;
     width: 98px;
     margin: 0rem auto 2rem auto;
-    ${max.tablet`display: block`};
+    ${max.laptop`display: block`};
   }
 
   ${H1} {
@@ -178,7 +178,7 @@ export const Hero = styled.div`
     position: relative;
     line-height: 1.15;
 
-    ${max.tablet`font-size: 4.4rem`};
+    ${max.laptop`font-size: 4.4rem`};
 
     ${max.mobile_l`font-size: 4rem; font-weight: bold`};
 
@@ -196,7 +196,7 @@ export const Hero = styled.div`
       top: 0.4rem;
       line-height: initial;
 
-      ${max.tablet`display: none`};
+      ${max.laptop`display: none`};
     }
   }
 
@@ -204,7 +204,7 @@ export const Hero = styled.div`
     font-size: 1.49rem;
     margin-top: 0.5rem;
 
-    ${max.tablet`font-size: 1.7rem; width: 80%; margin: 0.5rem auto 0 auto`};
+    ${max.laptop`font-size: 1.7rem; width: 80%; margin: 0.5rem auto 0 auto`};
 
     ${max.mobile_l`width: 100%; font-size: 2rem;`};
 
@@ -215,13 +215,13 @@ export const Hero = styled.div`
 export const FeatureList = styled(Wrapper)`
   justify-content: space-between;
 
-  ${max.tablet`flex-wrap: wrap`};
+  ${max.laptop`flex-wrap: wrap`};
 `
 
 export const FeatureCard = styled.div`
   width: 26.13rem;
 
-  ${max.tablet`width: 48.3%; margin-bottom: 3.5rem; box-shadow: 6px 15px 20px 0px rgba(0,0,0,0.26);`};
+  ${max.laptop`width: 48.3%; margin-bottom: 3.5rem; box-shadow: 6px 15px 20px 0px rgba(0,0,0,0.26);`};
 
   ${max.mobile_l`width: 100%;`};
 
@@ -230,7 +230,7 @@ export const FeatureCard = styled.div`
     font-weight: 400;
     margin-bottom: 0.6rem;
 
-    ${max.tablet`display: none`};
+    ${max.laptop`display: none`};
   }
 
   &:nth-of-type(1) {
@@ -242,7 +242,7 @@ export const FeatureCard = styled.div`
             height: 1.7rem;
             width: initial;
 
-            ${max.tablet`height: 2.4rem; margin-right: 2.5rem;`};
+            ${max.laptop`height: 2.4rem; margin-right: 2.5rem;`};
           }
         }
       }
@@ -257,7 +257,7 @@ export const FeatureCard = styled.div`
             width: 1.6rem;
             margin-right: 0.8rem;
 
-            ${max.tablet`width: 2.3rem; margin-right: 1.3rem;`};
+            ${max.laptop`width: 2.3rem; margin-right: 1.3rem;`};
           }
         }
       }
@@ -273,7 +273,7 @@ export const FeatureBody = styled.div`
   height: 34.79rem;
   position: relative;
 
-  ${max.tablet`height: 45.08rem;`};
+  ${max.laptop`height: 45.08rem;`};
   ${max.mobile_l`height: 61.25rem; padding: 4.1rem 5.25rem`};
   ${max.mobile_m`height: 49rem; padding: 3.28rem 4.2rem`};
 
@@ -283,7 +283,7 @@ export const FeatureBody = styled.div`
     margin-bottom: 0.6rem;
     display: none;
 
-    ${max.tablet`display: block`};
+    ${max.laptop`display: block`};
 
     ${max.mobile_l`font-size: 2.38rem; margin-bottom: 1rem;`};
     ${max.mobile_m`font-size: 1.904rem; margin-bottom: 0.8rem;`};
@@ -293,7 +293,7 @@ export const FeatureBody = styled.div`
     font-size: 1.28rem;
     font-family: 'Niramit', sans-serif;
 
-    ${max.tablet`font-size: 1.67rem;`};
+    ${max.laptop`font-size: 1.67rem;`};
 
     ${max.mobile_l`font-size: 2.25rem;`};
     ${max.mobile_m`font-size: 1.8rem;`};
@@ -315,7 +315,7 @@ export const FeatureBody = styled.div`
         width: 1.1rem;
         margin-right: 1.3rem;
 
-        ${max.tablet`width: 1.7rem;
+        ${max.laptop`width: 1.7rem;
         margin-right: 1.7rem;`};
       }
     }
@@ -326,7 +326,7 @@ export const AppFooter = styled.footer`
   width: 100%;
   background-color: ${color.footerBackground};
 
-  ${max.tablet`font-size: 1.3rem`};
+  ${max.laptop`font-size: 1.3rem`};
 
   ${max.mobile_l`font-size: 1.75rem`};
   ${max.mobile_m`font-size: 1.4rem`};
@@ -340,16 +340,16 @@ export const AppFooter = styled.footer`
     justify-content: space-between;
     align-self: center;
 
-    ${max.tablet`flex-direction: column; text-align: center;`};
+    ${max.laptop`flex-direction: column; text-align: center;`};
 
     ${P} {
       margin-right: 2.27rem;
-      ${max.tablet`margin: 0 auto`};
+      ${max.laptop`margin: 0 auto`};
     }
 
     & > ${Wrapper} {
       &:nth-of-type(1) {
-        ${max.tablet`margin-bottom: 3rem;`};
+        ${max.laptop`margin-bottom: 3rem;`};
 
         ul {
           li {
@@ -372,7 +372,7 @@ export const AppFooter = styled.footer`
   }
 
   ul {
-    ${max.tablet`margin-top: 1rem;`};
+    ${max.laptop`margin-top: 1rem;`};
     li {
       display: inline;
 
