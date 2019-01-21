@@ -10,16 +10,16 @@ const BlogCategory = props => {
   return (
     <CategoriesContainer>
       <CategoryList>
-        <CategoryItem active>
+        <CategoryItem active={props.active === 'growth'}>
           <P>Growth</P>
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem active={props.active === 'marketing'}>
           <P>Marketing</P>
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem active={props.active === 'collaboration'}>
           <P>Collaboration</P>
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem active={props.active === 'productivity'}>
           <P>Productivity</P>
         </CategoryItem>
       </CategoryList>
