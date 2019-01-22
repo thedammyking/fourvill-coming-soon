@@ -156,6 +156,7 @@ export const CategoryRecentPosts = styled(Wrapper)`
   justify-content: space-between;
   padding: 3rem 0;
   border-bottom: 1px dotted #dcc9c975;
+  margin-bottom: 3rem;
 `
 
 export const FirstPost = styled(Wrapper)`
