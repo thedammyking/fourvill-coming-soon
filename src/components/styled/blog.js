@@ -19,7 +19,7 @@ export const Container = styled.div`
   ${max.tablet`width: 90%`};
 `
 export const Main = styled.main`
-  margin: 4.61rem auto;
+  margin: 11.91rem auto;
 `
 
 export const Wrapper = styled.div`
@@ -50,6 +50,9 @@ export const ImageBox = styled.div``
 export const AppHeader = styled.header`
   width: 100%;
   background-color: #f7f6fb;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 
   ${max.tablet`background-color: #F7F6FB`};
   ${max.mobile_l`background-color: ${color.white}`};
@@ -109,11 +112,12 @@ export const Blog = styled.div`
 
 export const PostList = styled.div`
   width: 86.4%;
+  margin-left: 13.6%;
 `
 
 export const CategoriesContainer = styled.div`
   width: 11.6%;
-  margin-right: 2%;
+  position: fixed;
 `
 
 export const CategoryList = styled.ul``
@@ -151,7 +155,7 @@ export const CategoryHeaderImage = styled.div`
 export const CategoryRecentPosts = styled(Wrapper)`
   justify-content: space-between;
   padding: 3rem 0;
-  border-bottom: 1px solid #dcc9c9;
+  border-bottom: 1px dotted #dcc9c975;
 `
 
 export const FirstPost = styled(Wrapper)`
@@ -206,7 +210,7 @@ export const OtherPosts = styled.div`
 
       &:not(:last-child) {
         padding-bottom: 1.5rem;
-        border-bottom: 1px solid #dcc9c9;
+        border-bottom: 1px dotted #dcc9c975;
       }
 
       ${Wrapper} {

@@ -19,11 +19,15 @@ import Waypoint from 'react-waypoint'
 const BlogPostList = props => {
   return (
     <PostList>
-      <CategoryHeaderImage>
-        <ImageBox>
-          <img src={headerImage} alt="" />
-        </ImageBox>
-      </CategoryHeaderImage>
+      <Waypoint onEnter={() => props.changeCategoty('growth')}>
+        <div>
+          <CategoryHeaderImage>
+            <ImageBox>
+              <img src={headerImage} alt="" />
+            </ImageBox>
+          </CategoryHeaderImage>
+        </div>
+      </Waypoint>
       <Waypoint onEnter={() => props.changeCategoty('growth')}>
         <div>
           <CategoryRecentPosts>
