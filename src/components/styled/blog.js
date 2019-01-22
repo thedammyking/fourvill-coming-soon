@@ -144,7 +144,7 @@ export const CategoryItem = styled.li`
 export const CategoryHeaderImage = styled.div`
   height: 28.76rem;
   width: 100%;
-  background: ${color.accent};
+  background: ${props => (props.color ? props.color : color.accent)};
   padding: 6rem 0 0 5.25rem;
 
   ${ImageBox} {
@@ -234,7 +234,7 @@ export const OtherPosts = styled.div`
 
 // =================== SINGLE POST=======================
 export const SinglePost = styled.div`
-  width: 55.6%;
+  width: 60.6%;
   margin: 0 auto;
 
   .body {
@@ -268,6 +268,8 @@ export const PostHeader = styled(Wrapper)`
   }
 
   .details {
+    width: 74.34%;
+
     & > ${Wrapper} {
       font-size: 1.3rem;
 
@@ -288,6 +290,17 @@ export const PostHeader = styled(Wrapper)`
       width: 7.95rem;
       text-align: center;
       border-radius: 25px;
+    }
+
+    .excerpt {
+      font-size: 1.5rem;
+      line-height: 1.3;
+      margin: 2rem 0;
+    }
+
+    a {
+      font-size: 1.3rem;
+      color: ${color.readMore};
     }
   }
 `
