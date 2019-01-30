@@ -20,8 +20,6 @@ class CategorizedList extends Component {
     let postList = [...this.props.postList]
     const firstPost = postList[0]
     postList.splice(0, 1)
-
-    console.log(firstPost, postList)
     return (
       <Consumer>
         {({ setActiveCategory }) => {
@@ -55,7 +53,7 @@ class CategorizedList extends Component {
                 <OtherPosts>
                   <ul>
                     {postList.map((post, i) => (
-                      <li>
+                      <li key={i}>
                         <Wrapper>
                           <H5>
                             <Link

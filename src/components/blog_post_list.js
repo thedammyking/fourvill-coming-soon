@@ -35,7 +35,7 @@ class BlogPostList extends Component {
               })}
               {posts.map(({node}, i) => {
                 return (
-                  <Header
+                  <Header key={i}
               title={node.title} author={node.author.name} date={node.date} readTime={readingTime(node.content)}
                 excerpt={node.excerpt} slug={node.slug}
               />
