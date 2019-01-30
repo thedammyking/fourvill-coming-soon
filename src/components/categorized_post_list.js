@@ -42,7 +42,7 @@ class CategorizedList extends Component {
                     <H3
                       dangerouslySetInnerHTML={{ __html: firstPost.node.title }}
                     />
-                    <P
+                    <div className="excerpt"
                       dangerouslySetInnerHTML={{
                         __html: firstPost.node.excerpt,
                       }}

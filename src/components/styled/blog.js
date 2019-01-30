@@ -185,12 +185,13 @@ export const FirstPost = styled(Wrapper)`
       margin-bottom: 1rem;
     }
 
-    ${P} {
+    .excerpt{
+       p {
       font-size: 1.5rem;
       line-height: 1.3;
       margin-bottom: 3.5rem;
     }
-
+}
     a {
       font-size: 1.3rem;
       color: ${color.readMore};

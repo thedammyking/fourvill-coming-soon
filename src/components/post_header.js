@@ -22,9 +22,9 @@ const Header = ({author, date, excerpt, readTime, title, slug}) => {
         <P className="read-time">{readTime.text}</P>
         {excerpt && (
           <React.Fragment>
-            <P className="excerpt" dangerouslySetInnerHTML={{
+            <div className="excerpt" dangerouslySetInnerHTML={{
               __html: excerpt,
-            }}></P>
+            }}></div>
             <Link to={`/blog/${slug}`}>Read More</Link>
           </React.Fragment>
         )}
