@@ -3,7 +3,7 @@ import { PostHeader, ImageBox, P, H3, Wrapper } from './styled/blog'
 import animan_pair from '../svg/trans-animal-pair.svg'
 import { Link } from 'gatsby'
 
-const Header = props => {
+const Header = ({author, date, excerpt, readTime, title,}) => {
   return (
     <PostHeader>
       <div className="image">
@@ -13,14 +13,18 @@ const Header = props => {
       </div>
       <div className="details">
         <Wrapper>
-          <P className="author">Joe Ardooser</P>{' '}
-          <P className="date">Dec 21, 2018</P>
+          <P className="author">{author}</P>{' '}
+          <P className="date">{date}</P>
         </Wrapper>
-        <H3>Entrepreneur's guide to project management</H3>
-        <P className="read-time">6 mins read</P>
-        {props.excerpt && (
+        <H3 dangerouslySetInnerHTML={{
+          __html: title,
+        }}></H3>
+        <P className="read-time">{readTime.text}</P>
+        {excerpt && (
           <React.Fragment>
-            <P className="excerpt">{props.excerpt}</P>
+            <P className="excerpt" dangerouslySetInnerHTML={{
+              __html: excerpt,
+            }}></P>
             <Link to="/post">Read More</Link>
           </React.Fragment>
         )}

@@ -19,7 +19,7 @@ const Header = props => (
       <Nav>
         <Wrapper>
           <ImageBox>
-            <Link to="/">
+            <Link to="/blog">
               <img src={logo} alt="" />
             </Link>
           </ImageBox>

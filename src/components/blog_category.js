@@ -5,25 +5,31 @@ import {
   CategoryList,
   P,
 } from './styled/blog'
+import { Consumer } from '../pages/blog'
 
 const BlogCategory = props => {
   return (
-    <CategoriesContainer>
-      <CategoryList>
-        <CategoryItem active={props.active === 'growth'}>
-          <P>Growth</P>
-        </CategoryItem>
-        <CategoryItem active={props.active === 'marketing'}>
-          <P>Marketing</P>
-        </CategoryItem>
-        <CategoryItem active={props.active === 'collaboration'}>
-          <P>Collaboration</P>
-        </CategoryItem>
-        <CategoryItem active={props.active === 'productivity'}>
-          <P>Productivity</P>
-        </CategoryItem>
-      </CategoryList>
-    </CategoriesContainer>
+    <Consumer>
+      {({ activeCategory, categories }) => {
+        return (
+          <CategoriesContainer>
+            <CategoryList>
+              {/*compare category id instead */}
+              {categories.map(category => {
+                return (
+                  <CategoryItem
+                    active={activeCategory === category.node.wordpress_id}
+                    key={category.node.wordpress_id}
+                  >
+                    <P>{category.node.name}</P>
+                  </CategoryItem>
+                )
+              })}
+            </CategoryList>
+          </CategoriesContainer>
+        )
+      }}
+    </Consumer>
   )
 }
 

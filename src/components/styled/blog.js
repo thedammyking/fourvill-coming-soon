@@ -242,7 +242,7 @@ export const SinglePost = styled.div`
     width: 80%;
     margin: 0 auto;
 
-    ${P} {
+    p {
       font-size: 1.5rem;
       line-height: 1.3;
       margin: 2rem 0;

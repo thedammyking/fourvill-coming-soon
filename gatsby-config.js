@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: '.env',
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Coming Soon',
@@ -7,6 +11,15 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        baseUrl: 'fourvill-3a5078.easywp.com',
+        protocol: 'https',
+        hostingWPCOM: false,
+        verboseOutput: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

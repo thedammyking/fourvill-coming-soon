@@ -1,316 +1,51 @@
-import React from 'react'
-import {
-  PostList,
-  CategoryRecentPosts,
-  CategoryHeaderImage,
-  ImageBox,
-  FirstPost,
-  OtherPosts,
-  H3,
-  P,
-  Wrapper,
-  H5,
-} from './styled/blog'
-import headerImage from '../svg/animal-pair.svg'
-import { Link } from 'gatsby'
-import Header from '../components/post_header'
-import Waypoint from 'react-waypoint'
+import React, { Component } from 'react'
+import { PostList } from './styled/blog'
+import CategorizedList from './categorized_post_list'
+import { Consumer } from '../pages/blog'
+import Header from './post_header'
+import readingTime from 'reading-time'
 
-const BlogPostList = props => {
-  return (
-    <PostList>
-      <div>
-        <CategoryHeaderImage color="#FFB86F">
-          <ImageBox>
-            <img src={headerImage} alt="" />
-          </ImageBox>
-        </CategoryHeaderImage>
-        <Waypoint onEnter={() => props.changeCategoty('growth')} />
-        <CategoryRecentPosts>
-          <FirstPost>
-            <div className="number">
-              <span>1</span>
-            </div>
-            <div className="snippet">
-              <H3>Entrepreneur's guide to project management</H3>
-              <P>
-                We all need traffic. Targeted traffic to our sites that’ll
-                convert. SEO, PPC ads, organic social media posts, blogs, email
-                newsletters, a culture manifesto — you name it, content must be
-                produced. For us, content has been a major cornerstone of our
-                growth and it’s something we put a lot of time and energy in to.
-              </P>
-              <Link to="/post">Read More</Link>
-            </div>
-          </FirstPost>
-          <OtherPosts>
-            <ul>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      5 ways to use personalization to grow your SAAS
-                    </Link>
-                  </H5>
-                  <span>2</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How to identify your perfect customer
-                    </Link>
-                  </H5>
-                  <span>3</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How founders can write a quality post in 1 hour
-                    </Link>
-                  </H5>
-                  <span>4</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How to use customer feedback to fuel your growth
-                    </Link>
-                  </H5>
-                  <span>5</span>
-                </Wrapper>
-              </li>
-            </ul>
-          </OtherPosts>
-        </CategoryRecentPosts>
-      </div>
+const colors = ['#FFB86F', '#4664FF', '#A497AE', '#48acf0']
 
-      <div>
-        <CategoryHeaderImage color="#4664FF">
-          <ImageBox>
-            <img src={headerImage} alt="" />
-          </ImageBox>
-        </CategoryHeaderImage>
-        <Waypoint onEnter={() => props.changeCategoty('marketing')} />
-        <CategoryRecentPosts>
-          <FirstPost>
-            <div className="number">
-              <span>1</span>
-            </div>
-            <div className="snippet">
-              <H3>Entrepreneur's guide to project management</H3>
-              <P>
-                We all need traffic. Targeted traffic to our sites that’ll
-                convert. SEO, PPC ads, organic social media posts, blogs, email
-                newsletters, a culture manifesto — you name it, content must be
-                produced. For us, content has been a major cornerstone of our
-                growth and it’s something we put a lot of time and energy in to.
-              </P>
-              <Link to="/post">Read More</Link>
-            </div>
-          </FirstPost>
-          <OtherPosts>
-            <ul>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      5 ways to use personalization to grow your SAAS
-                    </Link>
-                  </H5>
-                  <span>2</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How to identify your perfect customer
-                    </Link>
-                  </H5>
-                  <span>3</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How founders can write a quality post in 1 hour
-                    </Link>
-                  </H5>
-                  <span>4</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How to use customer feedback to fuel your growth
-                    </Link>
-                  </H5>
-                  <span>5</span>
-                </Wrapper>
-              </li>
-            </ul>
-          </OtherPosts>
-        </CategoryRecentPosts>
-      </div>
+class BlogPostList extends Component {
+  render() {
+    return (
+      <Consumer>
+        {({ categories, posts }) => {
+          return (
+            <PostList>
+              {categories.map((category, i) => {
+                const categoryPost = posts
+                  .filter(
+                    post =>
+                      post.node.categories.findIndex(
+                        category => category.wordpress_id === 4
+                      ) >= 0
+                  )
+                  .slice(0, 5)
 
-      <div>
-        <CategoryHeaderImage color="#A497AE">
-          <ImageBox>
-            <img src={headerImage} alt="" />
-          </ImageBox>
-        </CategoryHeaderImage>
-        <Waypoint onEnter={() => props.changeCategoty('collaboration')} />
-        <CategoryRecentPosts>
-          <FirstPost>
-            <div className="number">
-              <span>1</span>
-            </div>
-            <div className="snippet">
-              <H3>Entrepreneur's guide to project management</H3>
-              <P>
-                We all need traffic. Targeted traffic to our sites that’ll
-                convert. SEO, PPC ads, organic social media posts, blogs, email
-                newsletters, a culture manifesto — you name it, content must be
-                produced. For us, content has been a major cornerstone of our
-                growth and it’s something we put a lot of time and energy in to.
-              </P>
-              <Link to="/post">Read More</Link>
-            </div>
-          </FirstPost>
-          <OtherPosts>
-            <ul>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      5 ways to use personalization to grow your SAAS
-                    </Link>
-                  </H5>
-                  <span>2</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How to identify your perfect customer
-                    </Link>
-                  </H5>
-                  <span>3</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How founders can write a quality post in 1 hour
-                    </Link>
-                  </H5>
-                  <span>4</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How to use customer feedback to fuel your growth
-                    </Link>
-                  </H5>
-                  <span>5</span>
-                </Wrapper>
-              </li>
-            </ul>
-          </OtherPosts>
-        </CategoryRecentPosts>
-      </div>
-
-      <div>
-        <CategoryHeaderImage color="#48acf0">
-          <ImageBox>
-            <img src={headerImage} alt="" />
-          </ImageBox>
-        </CategoryHeaderImage>
-        <Waypoint onEnter={() => props.changeCategoty('productivity')} />
-        <CategoryRecentPosts>
-          <FirstPost>
-            <div className="number">
-              <span>1</span>
-            </div>
-            <div className="snippet">
-              <H3>Entrepreneur's guide to project management</H3>
-              <P>
-                We all need traffic. Targeted traffic to our sites that’ll
-                convert. SEO, PPC ads, organic social media posts, blogs, email
-                newsletters, a culture manifesto — you name it, content must be
-                produced. For us, content has been a major cornerstone of our
-                growth and it’s something we put a lot of time and energy in to.
-              </P>
-              <Link to="/post">Read More</Link>
-            </div>
-          </FirstPost>
-          <OtherPosts>
-            <ul>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      5 ways to use personalization to grow your SAAS
-                    </Link>
-                  </H5>
-                  <span>2</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How to identify your perfect customer
-                    </Link>
-                  </H5>
-                  <span>3</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How founders can write a quality post in 1 hour
-                    </Link>
-                  </H5>
-                  <span>4</span>
-                </Wrapper>
-              </li>
-              <li>
-                <Wrapper>
-                  <H5>
-                    <Link to="/post">
-                      How to use customer feedback to fuel your growth
-                    </Link>
-                  </H5>
-                  <span>5</span>
-                </Wrapper>
-              </li>
-            </ul>
-          </OtherPosts>
-        </CategoryRecentPosts>
-      </div>
-      <Header
-        excerpt={`We all need traffic. Targeted traffic to our sites that’ll
-      convert. SEO, PPC ads, organic social media posts, blogs, email
-      newsletters, a culture manifesto — you name it, content must be
-      produced. For us, content has been a major cornerstone of our
-      growth and it’s something we put a lot of time and energy in to.`}
-      />
-    </PostList>
-  )
+                return (
+                  <CategorizedList
+                    key={category.node.wordpress_id}
+                    color={colors[i]}
+                    category={category.node.wordpress_id}
+                    postList={categoryPost}
+                  />
+                )
+              })}
+              {posts.map(({node}, i) => {
+                return (
+                  <Header
+              title={node.title} author={node.author.name} date={node.date} readTime={readingTime(node.content)}
+                excerpt={node.excerpt}
+              />
+                )
+              })}
+            </PostList>
+          )
+        }}
+      </Consumer>
+    )
+  }
 }
-
 export default BlogPostList

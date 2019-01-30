@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes, { element } from 'prop-types'
+import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Footer from './footer'
@@ -7,10 +7,6 @@ import { GlobalStyle } from '../components/styled'
 import * as typeformEmbed from '@typeform/embed'
 
 class Layout extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     this.mountTypeform()
   }
