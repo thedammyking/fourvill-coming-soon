@@ -3,7 +3,7 @@ import { PostHeader, ImageBox, P, H3, Wrapper } from './styled/blog'
 import animan_pair from '../svg/trans-animal-pair.svg'
 import { Link } from 'gatsby'
 
-const Header = ({author, date, excerpt, readTime, title,}) => {
+const Header = ({author, date, excerpt, readTime, title, slug}) => {
   return (
     <PostHeader>
       <div className="image">
@@ -25,7 +25,7 @@ const Header = ({author, date, excerpt, readTime, title,}) => {
             <P className="excerpt" dangerouslySetInnerHTML={{
               __html: excerpt,
             }}></P>
-            <Link to="/post">Read More</Link>
+            <Link to={`/blog/${slug}`}>Read More</Link>
           </React.Fragment>
         )}
       </div>

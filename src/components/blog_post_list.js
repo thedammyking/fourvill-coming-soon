@@ -37,7 +37,7 @@ class BlogPostList extends Component {
                 return (
                   <Header
               title={node.title} author={node.author.name} date={node.date} readTime={readingTime(node.content)}
-                excerpt={node.excerpt}
+                excerpt={node.excerpt} slug={node.slug}
               />
                 )
               })}
