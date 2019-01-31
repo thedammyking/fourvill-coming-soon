@@ -306,3 +306,70 @@ export const PostHeader = styled(Wrapper)`
     }
   }
 `
+export const PostItem = styled(Wrapper)`
+padding: 3rem 4rem;
+background-color: ${color.footerBackground};
+
+&:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+  .image {
+    position: relative;
+    width: 12.53rem;
+    height: 22.26rem;
+    background: ${color.secondary};
+    margin-left: 8.48rem;
+    margin-right: 3.7rem;
+  }
+
+  ${ImageBox} {
+    position: absolute;
+    width: 18.18rem;
+    left: -8.48rem;
+    top: 5.49rem;
+  }
+
+  .details {
+    width: 74.34%;
+
+    & > ${Wrapper} {
+      font-size: 1.3rem;
+
+      .author {
+        color: ${color.accent};
+        margin-right: 2.4rem;
+      }
+    }
+
+    ${H3} {
+      margin: 1rem 0;
+
+      a {
+        font-size: 3.2rem;
+      line-height: 1.2;
+      margin: 1rem 0;
+      color: inherit;
+      }
+
+    }
+
+    .read-time {
+      background: #dce8e4;
+      width: 7.95rem;
+      text-align: center;
+      border-radius: 25px;
+    }
+
+    .excerpt {
+      font-size: 1.5rem;
+      line-height: 1.3;
+      margin: 2rem 0;
+    }
+
+    a {
+      font-size: 1.3rem;
+      color: ${color.readMore};
+    }
+  }
+`

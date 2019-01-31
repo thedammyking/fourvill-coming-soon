@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { PostList } from './styled/blog'
 import CategorizedList from './categorized_post_list'
 import { Consumer } from '../pages/blog'
-import Header from './post_header'
+import Item from './post_item'
 import readingTime from 'reading-time'
+import Waypoint from 'react-waypoint'
 
 const colors = ['#FFB86F', '#4664FF', '#A497AE', '#48acf0']
 
@@ -11,7 +12,7 @@ class BlogPostList extends Component {
   render() {
     return (
       <Consumer>
-        {({ categories, posts }) => {
+        {({ categories, posts, setActiveCategory }) => {
           return (
             <PostList>
               {categories.map((category, i) => {
@@ -35,10 +36,15 @@ class BlogPostList extends Component {
               })}
               {posts.map(({node}, i) => {
                 return (
-                  <Header key={i}
+                  <React.Fragment>
+                  <Item key={i}
               title={node.title} author={node.author.name} date={node.date} readTime={readingTime(node.content)}
                 excerpt={node.excerpt} slug={node.slug}
               />
+              {i === 0 && <Waypoint
+                onEnter={() => setActiveCategory("")}
+              />}
+                  </React.Fragment>
                 )
               })}
             </PostList>

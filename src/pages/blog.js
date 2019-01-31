@@ -68,6 +68,7 @@ export const categoryQuery = graphql`
           excerpt
           slug
           content
+          date(formatString: "MMM DD, YYYY")
           author {
             name
           }
