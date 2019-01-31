@@ -5,39 +5,44 @@ import { Consumer } from '../pages/blog'
 import Item from './post_item'
 import readingTime from 'reading-time'
 import Waypoint from 'react-waypoint'
+import * as PropTypes from "prop-types"
 
 const colors = ['#FFB86F', '#4664FF', '#A497AE', '#48acf0']
 
 class BlogPostList extends Component {
+  static propTypes = {
+    posts: PropTypes.array,
+  }
+
   render() {
     return (
       <Consumer>
         {({ categories, posts, setActiveCategory }) => {
           return (
             <PostList>
-              {categories.map((category, i) => {
+              {categories.map(({node}, i) => {
+                const categoryId = node.wordpress_id
                 const categoryPost = posts
                   .filter(
-                    post =>
-                      post.node.categories.findIndex(
-                        category => category.wordpress_id === 4
+                    ({node: {categories}}) =>
+                      categories.findIndex(
+                        category => category.wordpress_id === categoryId
                       ) >= 0
-                  )
-                  .slice(0, 5)
+                  ).slice(0, 5)
 
                 return (
                   <CategorizedList
-                    key={category.node.wordpress_id}
+                    key={node.wordpress_id}
                     color={colors[i]}
-                    category={category.node.wordpress_id}
+                    category={node.wordpress_id}
                     postList={categoryPost}
                   />
                 )
               })}
-              {posts.map(({node}, i) => {
+              {this.props.posts.map(({node}, i) => {
                 return (
-                  <React.Fragment>
-                  <Item key={i}
+                  <React.Fragment key={i}>
+                  <Item 
               title={node.title} author={node.author.name} date={node.date} readTime={readingTime(node.content)}
                 excerpt={node.excerpt} slug={node.slug}
               />
