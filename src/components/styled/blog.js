@@ -6,6 +6,7 @@ export const color = {
   secondary: '#4664FF',
   white: '#ffffff',
   footerBackground: '#F3FBF8',
+  postItemBackground: '#F1FFFA',
   textColor: '#A497AE',
   accent: '#FFB86F',
   blogText: '#2A2D34',
@@ -308,7 +309,7 @@ export const PostHeader = styled(Wrapper)`
 `
 export const PostItem = styled(Wrapper)`
 padding: 3rem 4rem;
-background-color: ${color.footerBackground};
+background-color: ${color.postItemBackground};
 
 &:not(:last-child) {
   margin-bottom: 2rem;
