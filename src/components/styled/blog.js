@@ -114,11 +114,16 @@ export const Blog = styled.div`
 export const PostList = styled.div`
   width: 86.4%;
   margin-left: 13.6%;
+
+  ${max.laptop`width: 100%;
+  margin-left: 0;`};
 `
 
 export const CategoriesContainer = styled.div`
   width: 11.6%;
   position: fixed;
+
+  ${max.laptop`display: none`};
 `
 
 export const CategoryList = styled.ul``
@@ -148,8 +153,16 @@ export const CategoryHeaderImage = styled.div`
   background: ${props => (props.color ? props.color : color.accent)};
   padding: 6rem 0 0 5.25rem;
 
+  ${max.mobile_l`
+    padding: 2.5rem 0 0 2.25rem;
+    border-radius: 0.5rem;
+    height: 16.5rem;
+  `};
+
   ${ImageBox} {
     width: 32.07rem;
+
+    ${max.mobile_l`width: 18.07rem;`};
   }
 `
 
@@ -158,11 +171,16 @@ export const CategoryRecentPosts = styled(Wrapper)`
   padding: 3rem 0;
   border-bottom: 1px dotted #dcc9c975;
   margin-bottom: 3rem;
+
+  ${max.laptop`flex-direction: column`};
 `
 
 export const FirstPost = styled(Wrapper)`
   width: 54%;
   justify-content: space-between;
+
+  ${max.laptop`width: 100%; margin-bottom: 4rem`};
+
 
   .number {
     span {
@@ -171,19 +189,36 @@ export const FirstPost = styled(Wrapper)`
       height: 30px;
       border-radius: 50%;
       display: block;
-      font-size: 1.5rem;
+      font-size: 15px;
       text-align: center;
+      padding: 7px;
+      line-height: 1;
+
+      ${max.mobile_l`
+        font-size: 12px;
+        width: 25px;
+        height: 25px;
+        margin-top: 2rem;
+      `};
     }
+
+    ${max.laptop`margin-right: 3rem`};
+
+    ${max.mobile_l`margin-right: 2rem;`};
   }
 
   .snippet {
     width: 46.9rem;
+
+    ${max.laptop`width: initial`};
 
     ${H3} {
       font-size: 3.4rem;
       color: ${color.blogText};
       line-height: 1.2;
       margin-bottom: 1rem;
+
+      ${max.mobile_l`font-size: 3rem;`};
     }
 
     .excerpt{
@@ -191,17 +226,23 @@ export const FirstPost = styled(Wrapper)`
       font-size: 1.5rem;
       line-height: 1.3;
       margin-bottom: 3.5rem;
+
+      ${max.mobile_l`font-size: 1.7rem;`};
     }
 }
     a {
       font-size: 1.3rem;
       color: ${color.readMore};
+
+      ${max.mobile_l`font-size: 1.7rem;`};
     }
   }
 `
 
 export const OtherPosts = styled.div`
   width: 29.3%;
+
+  ${max.laptop`width: 100%`};
 
   ul {
     width: 100%;
@@ -219,11 +260,23 @@ export const OtherPosts = styled.div`
       ${Wrapper} {
         justify-content: space-between;
         align-items: center;
+
+        ${max.laptop`
+          flex-direction: row-reverse; 
+          justify-content: flex-end;
+        `};
+        
       }
 
       span {
-        font-size: 1.14rem;
+        font-size: 12px;
         color: ${color.accent};
+        line-height: 1;
+
+        ${max.laptop`    
+          font-weight: bold;
+          font-size: 1.5rem;
+        `};
       }
     }
   }
@@ -232,6 +285,16 @@ export const OtherPosts = styled.div`
     font-size: 1.5rem;
     width: 23.3rem;
     line-height: 1.2;
+
+    ${max.laptop`
+      width: initial; 
+      margin-left: 5.5rem; 
+      padding-top: .5rem;
+      font-weight: bold;
+      font-size: 2rem;
+    `};
+
+    ${max.mobile_l`margin-left: 3.9rem;`};
   }
 `
 
@@ -311,6 +374,9 @@ export const PostItem = styled(Wrapper)`
 padding: 3rem 4rem;
 background-color: ${color.postItemBackground};
 
+${max.laptop`background: none;
+padding: initial;`};
+
 &:not(:last-child) {
   margin-bottom: 2rem;
 }
@@ -322,6 +388,8 @@ background-color: ${color.postItemBackground};
     background: ${color.secondary};
     margin-left: 8.48rem;
     margin-right: 3.7rem;
+
+    ${max.laptop`display: none;`};
   }
 
   ${ImageBox} {
@@ -334,12 +402,17 @@ background-color: ${color.postItemBackground};
   .details {
     width: 74.34%;
 
+    ${max.laptop`width: initial;`};
+
     & > ${Wrapper} {
       font-size: 1.3rem;
+
+      ${max.mobile_l`font-size: 1.4rem;`};
 
       .author {
         color: ${color.accent};
         margin-right: 2.4rem;
+        text-transform: capitalize;
       }
     }
 
@@ -357,20 +430,27 @@ background-color: ${color.postItemBackground};
 
     .read-time {
       background: #dce8e4;
-      width: 7.95rem;
+      display: inline-block;
+      padding: 0 2rem;
       text-align: center;
       border-radius: 25px;
+
+      ${max.mobile_l`font-size: 1.4rem;`};
     }
 
     .excerpt {
       font-size: 1.5rem;
       line-height: 1.3;
       margin: 2rem 0;
+
+      ${max.mobile_l`font-size: 1.7rem;`};
     }
 
     a {
       font-size: 1.3rem;
       color: ${color.readMore};
+
+      ${max.mobile_l`font-size: 1.7rem;`};
     }
   }
 `

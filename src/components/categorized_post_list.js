@@ -6,7 +6,6 @@ import {
   FirstPost,
   OtherPosts,
   H3,
-  P,
   Wrapper,
   H5,
 } from './styled/blog'

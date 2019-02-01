@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import BlogLayout from '../components/blog_layout'
 import SEO from '../components/seo'
-import { SinglePost, P } from '../components/styled/blog'
+import { SinglePost} from '../components/styled/blog'
 import Header from '../components/post_header'
 import { graphql } from 'gatsby'
 import readingTime from 'reading-time'
