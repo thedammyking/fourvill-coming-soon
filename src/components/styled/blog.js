@@ -153,9 +153,10 @@ export const CategoryHeaderImage = styled.div`
   background: ${props => (props.color ? props.color : color.accent)};
   padding: 6rem 0 0 5.25rem;
 
+  ${max.laptop`border-radius: 0.5rem;`};
+
   ${max.mobile_l`
     padding: 2.5rem 0 0 2.25rem;
-    border-radius: 0.5rem;
     height: 16.5rem;
   `};
 
@@ -303,19 +304,27 @@ export const SinglePost = styled.div`
   width: 60.6%;
   margin: 0 auto;
 
+  ${max.tablet`width: 100%`};
+
   .body {
     width: 80%;
     margin: 0 auto;
+
+    ${max.laptop`width: 100%;`};
 
     p {
       font-size: 1.5rem;
       line-height: 1.3;
       margin: 2rem 0;
+
+      ${max.mobile_l`font-size: 1.7rem;`};
     }
   }
 `
 export const PostHeader = styled(Wrapper)`
   padding-top: 3rem;
+
+  ${max.laptop`flex-direction: column;`};
 
   .image {
     position: relative;
@@ -336,8 +345,12 @@ export const PostHeader = styled(Wrapper)`
   .details {
     width: 74.34%;
 
+    ${max.laptop`width: initial;`};
+
     & > ${Wrapper} {
       font-size: 1.3rem;
+      
+      ${max.mobile_l`font-size: 1.4rem;`};
 
       .author {
         color: ${color.accent};
@@ -353,21 +366,14 @@ export const PostHeader = styled(Wrapper)`
 
     .read-time {
       background: #dce8e4;
-      width: 7.95rem;
+      display: inline-block;
+      padding: 0 2rem;
       text-align: center;
       border-radius: 25px;
+
+      ${max.mobile_l`font-size: 1.4rem;`};
     }
 
-    .excerpt {
-      font-size: 1.5rem;
-      line-height: 1.3;
-      margin: 2rem 0;
-    }
-
-    a {
-      font-size: 1.3rem;
-      color: ${color.readMore};
-    }
   }
 `
 export const PostItem = styled(Wrapper)`
